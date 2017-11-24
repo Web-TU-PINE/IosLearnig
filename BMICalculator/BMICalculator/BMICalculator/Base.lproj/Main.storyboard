@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAM-Fk-S9P">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BMICalculatorViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="น้ำหนัก (กิโลกรัม)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-xz-LB2">
+                                <rect key="frame" x="16" y="87" width="382" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ส่วนสูง (เซนติเมตร)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="obB-j5-DKv">
+                                <rect key="frame" x="16" y="147" width="382" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbM-QN-W4v">
+                                <rect key="frame" x="16" y="223" width="177.66666666666666" height="34"/>
+                                <color key="backgroundColor" white="0.49274819759999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="แสดงค่า BMI">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bmiCalculationMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enD-Bc-Sjt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bhj-dm-dsy">
+                                <rect key="frame" x="16" y="340" width="382" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFx-Jj-W7P">
+                                <rect key="frame" x="220.66666666666663" y="223" width="177.33333333333337" height="34"/>
+                                <color key="backgroundColor" white="0.49274819759999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearContentMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BVR-Ng-hef"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61102118917052162" green="0.72336632013320923" blue="0.42663341551633277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HbM-QN-W4v" firstAttribute="top" secondItem="obB-j5-DKv" secondAttribute="bottom" constant="46" id="2rH-Zt-8dd"/>
+                            <constraint firstItem="JFx-Jj-W7P" firstAttribute="leading" secondItem="HbM-QN-W4v" secondAttribute="trailing" constant="27" id="41B-EI-kaw"/>
+                            <constraint firstItem="bhj-dm-dsy" firstAttribute="top" secondItem="HbM-QN-W4v" secondAttribute="bottom" constant="83" id="4he-rt-wAV"/>
+                            <constraint firstItem="JFx-Jj-W7P" firstAttribute="top" secondItem="obB-j5-DKv" secondAttribute="bottom" constant="46" id="CPc-Jn-jNQ"/>
+                            <constraint firstItem="obB-j5-DKv" firstAttribute="width" secondItem="ulW-xz-LB2" secondAttribute="width" id="Cev-cT-CYg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="obB-j5-DKv" secondAttribute="trailing" constant="16" id="GDV-1C-EyW"/>
+                            <constraint firstItem="HbM-QN-W4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="H00-5U-9gd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhj-dm-dsy" secondAttribute="trailing" constant="16" id="OiR-Th-Z6e"/>
+                            <constraint firstItem="bhj-dm-dsy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Qor-TQ-7ru"/>
+                            <constraint firstItem="obB-j5-DKv" firstAttribute="top" secondItem="ulW-xz-LB2" secondAttribute="bottom" constant="30" id="Rbu-2i-4zg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhj-dm-dsy" secondAttribute="bottom" constant="20" id="RgG-kV-9EL"/>
+                            <constraint firstItem="ulW-xz-LB2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ekM-jD-iOy"/>
+                            <constraint firstItem="JFx-Jj-W7P" firstAttribute="leading" secondItem="HbM-QN-W4v" secondAttribute="trailing" constant="27" id="eoX-IE-Piq"/>
+                            <constraint firstItem="ulW-xz-LB2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="io3-6S-bdv"/>
+                            <constraint firstItem="obB-j5-DKv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kEL-TW-yMU"/>
+                            <constraint firstItem="JFx-Jj-W7P" firstAttribute="height" secondItem="HbM-QN-W4v" secondAttribute="height" id="m1S-XM-xN1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JFx-Jj-W7P" secondAttribute="trailing" constant="16" id="mHX-Ku-fGt"/>
+                            <constraint firstItem="JFx-Jj-W7P" firstAttribute="width" secondItem="HbM-QN-W4v" secondAttribute="width" id="vUO-r4-4x0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ulW-xz-LB2" secondAttribute="trailing" constant="16" id="zP1-TS-GHk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtHeight" destination="obB-j5-DKv" id="1U5-ms-ER2"/>
+                        <outlet property="txtViewResult" destination="bhj-dm-dsy" id="bQc-3Z-ksk"/>
+                        <outlet property="txtWeight" destination="ulW-xz-LB2" id="dE7-8p-ENw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2701" y="-852"/>
+        </scene>
+        <!--Back-->
+        <scene sceneID="zW6-zG-CjE">
+            <objects>
+                <viewController title="Back" id="CNM-Om-l1C" customClass="MainViewController" customModule="BMICalculator" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IAu-J6-kNi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWx-zu-K0d">
+                                <rect key="frame" x="75" y="91" width="264" height="222"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="CalBMI" backgroundImage="bmi"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="yOf-kW-8Py"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKI-l8-7at">
+                                <rect key="frame" x="75" y="376" width="264" height="222"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="CalBMI" backgroundImage="developer"/>
+                                <connections>
+                                    <segue destination="lpN-Wz-nMh" kind="show" id="iib-vF-IzG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86697304249999996" green="0.60196839739999997" blue="0.52980607800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Bqg-yR-tL1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="29f-bv-Kfi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgp-bp-sBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.68115942029" y="-386.41304347826087"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="YzM-6I-hW9">
+            <objects>
+                <viewController id="lpN-Wz-nMh" customClass="AboutViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="elX-cM-45g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Boe-Sl-nkj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEE-Bb-FWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="-42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tvu-st-mTn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rAM-Fk-S9P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4af-Qx-dwu">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CNM-Om-l1C" kind="relationship" relationship="rootViewController" id="TE7-ZU-fO6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CG3-R2-RaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="-386"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bmi" width="476" height="475"/>
+        <image name="developer" width="475" height="475"/>
+    </resources>
+</document>
