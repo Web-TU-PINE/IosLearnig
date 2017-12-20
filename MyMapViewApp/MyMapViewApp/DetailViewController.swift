@@ -3,7 +3,7 @@
 //  MyMapViewApp
 //
 //  Created by user on 11/25/2560 BE.
-//  Copyright © 2560 Junior. All rights reserved.
+//  Copyright © 2560 teerapat. All rights reserved.
 //
 
 import UIKit
