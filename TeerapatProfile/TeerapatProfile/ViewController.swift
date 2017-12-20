@@ -3,7 +3,7 @@
 //  TeerapatProfile
 //
 //  Created by user on 11/24/2560 BE.
-//  Copyright © 2560 supachai. All rights reserved.
+//  Copyright © 2560 teerapat. All rights reserved.
 //
 
 import UIKit
