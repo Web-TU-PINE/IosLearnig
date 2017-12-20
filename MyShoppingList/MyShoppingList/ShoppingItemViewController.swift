@@ -3,7 +3,7 @@
 //  MyShoppingList
 //
 //  Created by user on 9/30/2560 BE.
-//  Copyright © 2560 ANT. All rights reserved.
+//  Copyright © 2560 teerapat. All rights reserved.
 //
 
 import UIKit
